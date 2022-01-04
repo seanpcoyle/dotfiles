@@ -66,10 +66,4 @@ if ! /usr/bin/pgrep oahd >/dev/null 2>&1; then
   sh -c "/usr/sbin/softwareupdate --install-rosetta --agree-to-license"
 fi
 
-# Install x86_64 Homebrew
-if [[ ! -d "/usr/local/homebrew" ]]; then
-  sh -c "cd /tmp; mkdir homebrew; curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew"
-  sh -c "sudo mv /tmp/homebrew /usr/local/homebrew"
-fi
-
 echo 'Done!'

@@ -1,9 +1,3 @@
-# The following is temporary until the supervisor package from Homebrew is fixed
-SA_REPO="/Users/scoyle/Projects/sa/schooladmin"
-
 alias dir='ls -l'
 alias less='less --raw'
 alias ls='ls -G'
-alias sup="supervisorctl -c ${SA_REPO}/supervisord.conf"
-alias supd="supervisord -c ${SA_REPO}/supervisord.conf"
-alias xbrew='arch -x86_64 /usr/local/homebrew/bin/brew'
