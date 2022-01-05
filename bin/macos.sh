@@ -59,6 +59,14 @@ defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 ###############################################################################
+# Mouse                                                                       #
+###############################################################################
+
+# Set mouse speed and disable "shake to find mouse"
+defaults write -g com.apple.mouse.scaling 2
+defaults write NSGlobalDomain CGDisableCursorLocationMagnification -bool true
+
+###############################################################################
 # System Updates                                                              #
 ###############################################################################
 
@@ -77,5 +85,10 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+# Start Unsplash on startup and update all screens, updating daily
+defaults write com.unsplash.Wallpapers LaunchOnStartup -bool true
+defaults write com.unsplash.Wallpapers UpdateAllScreensEnabled -bool true
+defaults write com.unsplash.Wallpapers UpdateFrequency -int 0
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
