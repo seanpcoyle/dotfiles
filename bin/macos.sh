@@ -59,6 +59,19 @@ defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 ###############################################################################
+# System Updates                                                              #
+###############################################################################
+
+# Automatically install MacOS updates
+sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticallyInstallMacOSUpdates -boolean true
+
+# Automatically install App Store updates
+sudo defaults write /Library/Preferences/com.apple.commerce.plist AutoUpdate -bool true
+
+# Check for software updates daily, not just once per week
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+###############################################################################
 # Misc                                                                        #
 ###############################################################################
 
