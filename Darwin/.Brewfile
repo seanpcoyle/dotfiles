@@ -5,6 +5,7 @@ tap 'homebrew/cask-fonts'
 brew 'mas'
 brew 'nvm'
 brew 'romkatv/powerlevel10k/powerlevel10k'
+brew 'yarn'
 brew 'z'
 brew 'zstd'
 

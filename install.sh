@@ -8,9 +8,13 @@ PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:${PATH}"
 
 # Bootstrap the project
 if [[ ! -e ~/.dotfiles ]]; then
-  git clone https://github.com/seanpcoyle/dotfiles.git ~/.dotfiles
+  git clone git@github.com:seanpcoyle/dotfiles.git ~/.dotfiles
   ~/.dotfiles/install.sh
   exit
+fi
+
+if [[ ! -e /opt/homebrew ]]; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 create_links() {
@@ -39,6 +43,13 @@ mkdir -p "${HOME}/.nvm"
 
 brew bundle --file="${HOME}/.Brewfile"
 
+mkdir -p "${HOME}/.oh-my-zsh/themes/powerlevel10k"
+
+if [[ ! -e "${HOME}/.oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme" ]]; then
+  ln -s "$(brew --prefix powerlevel10k)/powerlevel10k.zsh-theme" \
+    "${HOME}/.oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme"
+fi
+
 # Symlink platform-agnostic and platform-specific files to home directory
 create_links "${HOME}/.dotfiles/Default"
 create_links "${HOME}/.dotfiles/$(uname)"
@@ -58,12 +69,7 @@ set +e; . "$(brew --prefix nvm)/nvm.sh"; set -e;
 # If we don't have a default NVM set, use the latest
 nvm use --silent default || nvm install --default node
 
-sh -c "./bin/app_store_apps.sh"
-sh -c "./bin/macos.sh"
-
-if ! /usr/bin/pgrep oahd >/dev/null 2>&1; then
-  echo "Installing Rosetta 2"
-  sh -c "/usr/sbin/softwareupdate --install-rosetta --agree-to-license"
-fi
+sh -c "${HOME}/.dotfiles/bin/app_store_apps.sh"
+sh -c "${HOME}/.dotfiles/bin/macos.sh"
 
 echo 'Done!'
