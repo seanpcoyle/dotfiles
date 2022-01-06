@@ -47,9 +47,6 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-# Add legacy Homebrew to PATH
-export PATH="$PATH:/usr/local/homebrew/bin:/usr/local/bin"
-
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
