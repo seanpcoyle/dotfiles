@@ -62,9 +62,14 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 # Mouse                                                                       #
 ###############################################################################
 
-# Set mouse speed and disable "shake to find mouse"
+# Set mouse speed
 defaults write -g com.apple.mouse.scaling 2
+
+# Disable "shake to find mouse"
 defaults write NSGlobalDomain CGDisableCursorLocationMagnification -bool true
+
+# Enable right click on Apple Mouse
+defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode TwoButton
 
 ###############################################################################
 # System Updates                                                              #
