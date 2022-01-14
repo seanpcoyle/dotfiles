@@ -17,3 +17,5 @@ dotpull() {
 [[ -e "${HOME}/.secrets" ]] && source "${HOME}/.secrets"
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+REACT_EDITOR=idea
