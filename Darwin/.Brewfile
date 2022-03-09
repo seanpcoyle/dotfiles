@@ -10,6 +10,7 @@ brew 'z'
 brew 'zstd'
 
 cask 'authy'
+cask 'adobe-creative-cloud'
 cask 'datagrip'
 cask 'docker'
 cask 'flipper'
