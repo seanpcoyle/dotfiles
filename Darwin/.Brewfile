@@ -1,8 +1,10 @@
 tap 'homebrew/cask'
 tap 'romkatv/powerlevel10k'
 tap 'homebrew/cask-fonts'
+tap 'wix/brew'
 
 brew 'appium'
+brew 'applesimutils'
 brew 'asdf'
 brew 'mas'
 brew 'romkatv/powerlevel10k/powerlevel10k'
