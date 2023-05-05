@@ -5,7 +5,7 @@ tap 'homebrew/cask-fonts'
 tap 'romkatv/powerlevel10k'
 tap 'wix/brew'
 
-brew 'appium'
+brew 'ansible'
 brew 'applesimutils'
 brew 'asdf'
 brew 'cdktf'
