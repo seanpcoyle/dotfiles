@@ -14,7 +14,7 @@ if [[ ! -e ~/.dotfiles ]]; then
 fi
 
 if [[ ! -e /opt/homebrew ]]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 create_links() {
