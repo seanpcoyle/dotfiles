@@ -52,7 +52,7 @@ brew bundle --file="${HOME}/.Brewfile"
 mkdir -p "${HOME}/.oh-my-zsh/themes/powerlevel10k"
 
 if [[ ! -e "${HOME}/.oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme" ]]; then
-  ln -s "$(brew --prefix powerlevel10k)/powerlevel10k.zsh-theme" \
+  ln -sf "$(brew --prefix powerlevel10k)/powerlevel10k.zsh-theme" \
     "${HOME}/.oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme"
 fi
 
