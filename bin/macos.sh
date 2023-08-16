@@ -50,6 +50,13 @@ defaults write com.apple.screencapture target clipboard
 # Show battery percentage in the status bar
 defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter.plist BatteryShowPercentage -bool true
 
+# Show month, day of week, and seconds on status bar clock
+defaults write com.apple.menuextra.clock "ShowAMPM" -bool true
+defaults write com.apple.menuextra.clock "ShowDayOfMonth" -bool true
+defaults write com.apple.menuextra.clock "ShowDayOfWeek" -bool true
+defaults write com.apple.menuextra.clock "ShowDate" -bool true
+defaults write com.apple.menuextra.clock "ShowSeconds" -bool true
+
 ###############################################################################
 # Keyboard                                                                    #
 ###############################################################################
