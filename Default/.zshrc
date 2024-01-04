@@ -24,6 +24,8 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+export PATH=$PATH:"/Applications/IntelliJ IDEA.app/Contents/MacOS"
+
 export PATH="$(yarn global bin):$PATH"
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
